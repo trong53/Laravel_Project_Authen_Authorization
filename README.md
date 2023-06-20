@@ -1,6 +1,6 @@
-## Projet Laravel sur Authentification et Authorization
+# Projet Laravel sur Authentification et Authorization
 
-1/ Liste des Modules :
+## 1/ Liste des Modules :
 
     - Users
 
@@ -8,7 +8,7 @@
 
     - Posts 
 
-2/ Authorization :
+## 2/ Authorization :
 
     - Création d'un group : établir les permissions (Read, Create, Update, Delete, et Capacité de Permissions) de son group
 
@@ -46,17 +46,17 @@
 
     - Utiliser Soft Delete : Module Restore et Destroy un User
 
-3/ Authorization :
+## 3/ Authorization :
 
    - Gate : pour accéder à un Controller
   
    - Policy : pour chaque model
 
-4/ Authentification :
+## 4/ Authentification :
 
     - Validation of Forms :  validator et messages d'erreurs pour les 'Inputs'
 
-5/ Autres :
+## 5/ Autres :
 
     - Migration : créer les tables, Foreign Keys
 
@@ -69,28 +69,48 @@
     - Pagination (5 items per page)
 
     - Ranger (sort) les Posts, Groups, Users selon Name, ou Authors, ...
+
+## 1. Login :
     
-    ![login](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/48d2816b-1e85-442e-a7b5-6e56f5dcd66a)
+![login](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/86c602b4-0906-4f5d-99e7-ac9c0754c111)
 
-    ![register](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/677d4a73-7179-46cc-b6cb-3c2c00528965)
+## 2. Inscription :
 
-    ![listPost](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/86c48da7-1f1c-4ad1-b1e9-944c3dd9000a)
+![register](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/677d4a73-7179-46cc-b6cb-3c2c00528965)
 
-    ![addPost](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/7c95f465-5e33-4ef4-bf73-69062d247e0a)
+## 3. Posts :
 
-    ![trashedPost](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/de71d088-08fe-4400-9b93-c435e7ac544e)
+![listPost](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/86c48da7-1f1c-4ad1-b1e9-944c3dd9000a)
 
-    ![PostsofTrashedUsers](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/1f453e33-c363-4418-9bbf-909d9700ee55)
+![addPost](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/7c95f465-5e33-4ef4-bf73-69062d247e0a)
 
-    ![listGroup](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/a0616bc8-9b7c-42fd-bacf-83bb5c18db74)
+![trashedPost](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/de71d088-08fe-4400-9b93-c435e7ac544e)
 
-    ![PermissionForGroup](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/d4f4d53a-08cf-4f32-b484-a3600bc1c4a4)
+## Posts des Users supprimés (soft Deletes) : Uniquement Administrateurs peuvent voir ces posts 
 
-    ![ListUser](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/54256c50-f38e-4232-a33c-381084972940)
+![PostsofTrashedUsers](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/1f453e33-c363-4418-9bbf-909d9700ee55)
 
-    ![TrashedUsers](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/f2ddca85-8f42-4d77-b93d-b2284d4ad62f)
+## 4. Groups :
 
-    ![deleteUser](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/77d1378e-67c5-435f-a26b-26ebd54ad406)
+![listGroup](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/a0616bc8-9b7c-42fd-bacf-83bb5c18db74)
+
+## - En cliquant sur le Bouton "Permission" : nous avons le management des permissions de ce groupe, on peut modifier les permissions. Exemples :
+
+### a. Group Administration :
+
+![PermissionForGroup](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/d4f4d53a-08cf-4f32-b484-a3600bc1c4a4)
+
+### b. Group Staff :
+
+![permissionStaff](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/67203d84-2aac-47d8-84ac-be955e5d68ec)
+
+## 5. Users :
+
+![ListUser](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/54256c50-f38e-4232-a33c-381084972940)
+
+![TrashedUsers](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/f2ddca85-8f42-4d77-b93d-b2284d4ad62f)
+
+![deleteUser](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/77d1378e-67c5-435f-a26b-26ebd54ad406)
 
 
     
