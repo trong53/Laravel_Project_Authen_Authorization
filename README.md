@@ -68,9 +68,9 @@
 
     - Pagination (5 items per page)
 
-    - Ranger (sort) les Posts, Groups, Users selon Name, ou Authors, ....
-
-    ![login](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/5ab51108-e77e-4e49-b070-8ab9657f2a15)
+    - Ranger (sort) les Posts, Groups, Users selon Name, ou Authors, ...
+    
+    ![login](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/48d2816b-1e85-442e-a7b5-6e56f5dcd66a)
 
     ![register](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/677d4a73-7179-46cc-b6cb-3c2c00528965)
 
