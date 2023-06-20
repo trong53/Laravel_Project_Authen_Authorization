@@ -1,64 +1,97 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## Projet Laravel sur Authentification et Authorization
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+1/ Liste des Modules :
 
-## About Laravel
+    - Users
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    - Groups (des Users)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    - Posts 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2/ Authorization :
 
-## Learning Laravel
+    - Création d'un group : établir les permissions (Read, Create, Update, Delete, et Capacité de Permissions) de son group
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    - Créer un User : Il a tous les droits de son group
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    - Les Droits :
 
-## Laravel Sponsors
+    a/ Module Post :
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    - Lire tous les Posts
 
-### Premium Partners
+    - Créer un Post
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    - Modifier un Post : Il ne peut modifier que son prore Post
 
-## Contributing
+    - Supprimer un Post : Il ne peut supprimer que son prore Post. Utiliser Soft Delete et Les Posts des User supprimés.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    b/ Module Group:
 
-## Code of Conduct
+    - Lister tous les Groups
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    - Ajouter un groupe
 
-## Security Vulnerabilities
+    - Modifier et supprimer son propre
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    - Possibilité d'établir les droits de l'User
 
-## License
+    c/ Module User:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    - Lister tous les User
+
+    - Ajouter un User
+
+    - Modifier et supprimer un User
+
+    - Utiliser Soft Delete : Module Restore et Destroy un User
+
+3/ Authorization :
+
+   - Gate : pour accéder à un Controller
+  
+   - Policy : pour chaque model
+
+4/ Authentification :
+
+    - Validation of Forms :  validator et messages d'erreurs pour les 'Inputs'
+
+5/ Autres :
+
+    - Migration : créer les tables, Foreign Keys
+
+    - Seeder
+
+    - Models : Etablir les relations entre les tables selon Foreign Keys
+
+    - Search : sur les champs de sa table et de la relation table.
+
+    - Pagination (5 items per page)
+
+    - Ranger (sort) les Posts, Groups, Users selon Name, ou Authors, ....
+
+    ![login](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/5ab51108-e77e-4e49-b070-8ab9657f2a15)
+
+    ![register](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/677d4a73-7179-46cc-b6cb-3c2c00528965)
+
+    ![listPost](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/86c48da7-1f1c-4ad1-b1e9-944c3dd9000a)
+
+    ![addPost](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/7c95f465-5e33-4ef4-bf73-69062d247e0a)
+
+    ![trashedPost](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/de71d088-08fe-4400-9b93-c435e7ac544e)
+
+    ![PostsofTrashedUsers](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/1f453e33-c363-4418-9bbf-909d9700ee55)
+
+    ![listGroup](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/a0616bc8-9b7c-42fd-bacf-83bb5c18db74)
+
+    ![PermissionForGroup](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/d4f4d53a-08cf-4f32-b484-a3600bc1c4a4)
+
+    ![ListUser](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/54256c50-f38e-4232-a33c-381084972940)
+
+    ![TrashedUsers](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/f2ddca85-8f42-4d77-b93d-b2284d4ad62f)
+
+    ![deleteUser](https://github.com/trong53/Laravel_Project_Authen_Authorization/assets/107623849/77d1378e-67c5-435f-a26b-26ebd54ad406)
+
+
+    
+
